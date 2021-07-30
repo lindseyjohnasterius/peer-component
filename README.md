@@ -16,7 +16,7 @@ So, this would look like:
 
 ```
 
-This will generate a div with a QR code at the beggining. following that link to the same page will connect your two computers to that peer with: 
+This will generate a div with a QR code. Following that link to the same page will connect your two computers to that peer with: 
 
 
 ```xml  
