@@ -1,7 +1,7 @@
 # peer-component
 Web Component for peer.js components
 
-## Current Status: Non functioning prototype
+## Current Status: prototype
 
 When I am finished you will be able to include this javascript into your application and you will be able to sync two components between two browsers using Peer.js. 
 
