@@ -2,19 +2,18 @@
 
 ## PROJECT STATUS
 
-This is a design document with a perhaps functional prototype of an expirimental Auth system. It should be considered extremely dangerous to use. 
+This is a design document with a perhaps functional prototype of an experimental Auth system. It should be considered extremely dangerous to use. 
 ### NOTE: THIS SHOULD NOT BE CONSIDERED SECURE. DO NOT USE , ONLY READ AND EVEN THEN BE CAREFUL.
-
 
 ## Usage
 
-Include user-persona.js in your website and use:
+Include peer-component.js in your website and use:
 
 ```html
-  <user-persona></user-persona>
+  <peer-component></peer-component>
 ```
 
-If there is not an existing user persona, this will generate a local identity with: 
+If there is not an existing device identity, this will generate a local identity with: 
 
 it's own:
 
