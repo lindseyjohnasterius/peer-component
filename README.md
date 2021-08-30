@@ -1,37 +1,44 @@
 # peer-component
-Web Component for peer.js components
 
-## Current Status: prototype
+## PROJECT STATUS
 
-When I am finished you will be able to include this javascript into your application and you will be able to sync two components between two browsers using Peer.js. 
-
-So, this would look like: 
+This is a design document with a perhaps functional prototype of an expirimental Auth system. It should be considered extremely dangerous to use. 
+### NOTE: THIS SHOULD NOT BE CONSIDERED SECURE. DO NOT USE , ONLY READ AND EVEN THEN BE CAREFUL.
 
 
-``` xml
+## Usage
 
-<peer-component>
-  <h1>Peer</h1>
-</peer-component>
+Include user-persona.js in your website and use:
 
+```html
+  <user-persona></user-persona>
 ```
 
-This will generate a div with a QR code. Following that link to the same page will connect your two computers to that peer with: 
+If there is not an existing user persona, this will generate a local identity with: 
 
+it's own:
 
-```xml  
+- unique id
+- cryptographic public key
+- cryptographic private key
 
-<peer-component target-id="target_id">
-  <!-- This DIV will sync to the other div to here -->
-  
-</peer-component>
+It will also allow for upload and download of keys from this widget. 
 
+You will then be able to access that particular devices identity by querying the HTML Element: 
 
+```javascript
+  document.querySelector('user-persona').getAttribute('user-name')
+  document.querySelector('user-persona').getAttribute('peer-id')
 ```
 
+This should store an arbitrary amountr of XML data. This XML Data can be: 
 
-To come: 
 
-If use has input, canvas or video, all changes should be streamed. 
+```HTML
+  <user-name></user-name>
+  <peer-id></peer-id>
+  <user-img src="binary object of file"></user-img>
+```
 
-If use has an image, the image should transfer via binary data with the SRC. 
+You can upload a private key, but you cannot download a private key. 
+
