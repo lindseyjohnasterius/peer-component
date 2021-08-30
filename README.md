@@ -5,6 +5,8 @@
 This is a design document with a perhaps functional prototype of an experimental Auth system. It should be considered extremely dangerous to use. 
 ### NOTE: THIS SHOULD NOT BE CONSIDERED SECURE. DO NOT USE , ONLY READ AND EVEN THEN BE CAREFUL.
 
+Demo: https://lindseymysse.github.io/peer-component/demo.html
+
 ## Usage
 
 Include peer-component.js in your website and use:
