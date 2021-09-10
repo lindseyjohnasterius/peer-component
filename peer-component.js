@@ -29,6 +29,11 @@ class PeerComponent extends HTMLElement {
       this.connection = conn
       this.QR_CODE.remove()
       this.innerHTML = 'peered to ' + conn.peer
+
+
+      conn.on('data', (data) => {
+        this.innerHTML = data
+      })
     })
   }
 
@@ -36,35 +41,9 @@ class PeerComponent extends HTMLElement {
     return [];
   }
 
-  handleInputChange(){
-
-  }
-
-  handleTextAreaChange(){
-
-  }
-
-  handleCanvas(canvas){
-
-  }
-
-  handleImage(img){
-
-  }
-
-  handleVideo(video){
-
-  }
-
-  handleAudio(audio){
-
-  }
-
   update(){
-    console.log('updating!')
     if(!this.connection) return
 
-    console.log('sending:', this.innerHTML)
     this.connection.send(this.innerHTML)
 
     // send new HTML to all peers

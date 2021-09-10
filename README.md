@@ -12,6 +12,12 @@ Demo: https://lindseymysse.github.io/peer-component/demo.html
 Include peer-component.js in your website and use:
 
 ```html
+
+  <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+  <script src="https://lindseymysse.github.io/LNSYs-toolbox/helpers.js"></script>
+  <script type="text/javascript" src="https://lindseymysse.github.io/qr-code-element/qr-code.js"></script>
+  <script type="text/javascript" src="peer-component.js"></script>
+
   <peer-component></peer-component>
 ```
 

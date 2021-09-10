@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>PEER</title>
   <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+  <script src="https://lindseymysse.github.io/LNSYs-toolbox/helpers.js"></script>
   <script type="text/javascript" src="https://lindseymysse.github.io/qr-code-element/qr-code.js"></script>
   <script type="text/javascript" src="peer-component.js"></script>
 </head>
@@ -24,22 +25,6 @@
     peer_component.innerHTML = new_value
     peer_component.update()
   })
-
-  function getURLValues(URL = window.location.href ){
-    const search_params = new URLSearchParams(URL)
-    let options = {}
-    for (const [key, unparsed_value] of search_params) {
-      if(key !== window.location.origin + window.location.pathname + '?' ){
-        try {
-          const value = JSON.parse(decodeURI(unparsed_value))
-          options[key] = value
-        } catch {
-          options[key] = decodeURI(unparsed_value)
-        }
-      }
-    }
-    return options
-  }
 
   const options = getURLValues()
   if(options['target-id']){
